@@ -8,8 +8,7 @@ WORKDIR $workdir
 
 COPY . $workdir
 
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-RUN cnpm install -i
+RUN npm install -i
 RUN mv flag /
 
 ENTRYPOINT node app.js
